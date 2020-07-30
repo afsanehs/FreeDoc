@@ -39,12 +39,10 @@ ActiveRecord::Schema.define(version: 2020_07_30_193036) do
     t.string "first_name"
     t.string "last_name"
     t.string "zipcode"
-    t.integer "speciality_id"
     t.integer "city_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["city_id"], name: "index_doctors_on_city_id"
-    t.index ["speciality_id"], name: "index_doctors_on_speciality_id"
   end
 
   create_table "patients", force: :cascade do |t|
